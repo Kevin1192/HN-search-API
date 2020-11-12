@@ -1,0 +1,42 @@
+
+.top-result {
+    display: flex;
+}
+
+.bottom-result {
+    display: flex;
+    font-size: 13px;
+    opacity: 0.7;
+}
+.bottom-text:first-child {
+    padding-right: 8px;
+}
+.bottom-text:not(:first-child) {
+    padding: 0 8px;
+}
+
+.bottom-text:not(:last-child) {
+    border-right: black 1px solid;
+}
+
+.title {
+    padding: 2px 3px 2px 0;
+}
+
+.url {
+    padding: 2px 1px;
+}
+
+.title > a {
+    color: black;
+    font-weight: 400;
+}
+
+.url > a {
+    opacity: 0.7;
+}
+
+.url > a:hover {
+    text-decoration: underline;
+}
+

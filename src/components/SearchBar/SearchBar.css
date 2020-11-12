@@ -1,0 +1,13 @@
+#search {
+    width: 500px;
+    height: 30px;
+    font-size: large;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#search-button {
+    height: 35px;
+    padding: 0 5px;
+    margin: 0;
+}
