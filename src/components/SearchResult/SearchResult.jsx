@@ -1,5 +1,4 @@
-import React, { Fragment} from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
 import './SearchResult.css';
 
@@ -12,7 +11,7 @@ const SearchResult = ({ result }) => {
                 <div className='url'><a href={url}>({url})</a></div>
             </div>
             <div className='bottom-result'>
-    <div className='points bottom-text'>{points}</div>
+    <div className='points bottom-text'>{points} points</div>
                 <div className='auther bottom-text'>{author}</div>
                 <div className='created_at bottom-text'>{created_at}</div>
                 <div className='num_comments bottom-text'>{num_comments} comments</div>
@@ -21,4 +20,5 @@ const SearchResult = ({ result }) => {
         </div>
     )
 }
-export default connect(null)(SearchResult);
+
+export default SearchResult;

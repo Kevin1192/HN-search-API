@@ -1,3 +1,7 @@
 export const QUERY_RESULTS = 'QUERY_RESULTS';
 
 export const SAVE_RESULTS = 'SAVE_RESULTS';
+
+export const RETRIVE_TERM = 'RETRIVE_TERM';
+
+export const CHANGE_SEARCH = 'CHANGE_SEARCH';

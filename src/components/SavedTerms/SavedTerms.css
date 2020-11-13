@@ -1,0 +1,20 @@
+.side-bar {
+    min-width: 100px;
+    border: 1px black solid;
+    z-index: 100;
+    position: fixed;
+    right: 5%;
+    padding: 5px 15px;
+    background-color: white;
+}
+
+.side-bar > h5 {
+    margin: 5px 10px 30px 10px;
+}
+
+.side-bar > ul {
+    padding-inline-start: 30px;
+}
+.side-bar > li {
+    cursor: pointer;
+}
