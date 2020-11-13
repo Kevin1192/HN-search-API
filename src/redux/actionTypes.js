@@ -1,0 +1,3 @@
+export const QUERY_RESULTS = 'QUERY_RESULTS';
+
+export const SAVE_RESULTS = 'SAVE_RESULTS';

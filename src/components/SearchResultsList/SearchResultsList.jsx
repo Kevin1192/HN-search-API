@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Fragment} from 'react';
+import { connect } from 'react-redux';
 
- import SearchResult from '../SearchResult/SearchResult';
-import list from '../../assets/listTemplate';
-const SearchResultsList = () => {
+import SearchResult from '../SearchResult/SearchResult';
+
+const SearchResultsList = ({ results }) => {
    
     return (
-        <div>
-            {list.map((result, idx) => <SearchResult key={idx} result={result} />)}
-        </div>
+        <Fragment>
+            {results.map((result, idx) => <SearchResult key={idx} result={result} />)}
+        </Fragment>
     )
 }
 
-export default SearchResultsList;
+const mapStateToProps = ({ search: {results}}) => ({
+    results,
+})
+export default connect(mapStateToProps)(SearchResultsList);

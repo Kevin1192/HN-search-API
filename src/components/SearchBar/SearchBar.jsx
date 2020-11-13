@@ -1,38 +1,41 @@
-import React, { useState } from 'react';
-
+import React, { useState, Fragment, useEffect } from 'react';
 import './SearchBar.css';
+import { connect } from 'react-redux';
+import { queryResultsAsync } from '../../redux/actions/searchAction';
 
-const apiUrl = 'http://hn.algolia.com/api/v1/';
-//search?query=foo&tags=story'
-const SearchBar = () => {
+const SearchBar = ({ queryResults }) => {
     const initialState = {
         search: '',
     }
     const [state, setState] = useState(initialState);
+
+    // query results from api whenever search term changes
+    useEffect(() => {
+            queryResults(state.search)
+        }, [state.search])
+
+
     const handleSubmit = (evt) => {
         evt.preventDefault();
     }
 
-    const handleChange = async (evt) => {
+    const handleChange = (evt) => {
         const {value, name} = evt.target;
         setState({ [name]: value});
-        try {
-            const res = await fetch(`${apiUrl}search?query=${state.search}&tags=story`)
-            const list = await res.json()
-            console.log(list);
-        } catch(err) {
-            console.log(err)
-        }
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <Fragment>
+            <form onSubmit={handleSubmit} className='search-bar'>
                 <input type='text' name='search' id='search' value={state.search} placeholder='search stories by title, url or author' onChange={handleChange} />
                 <button type='submit' id='search-button'>Search</button>
             </form>
-        </div>
+        </Fragment>
     )
 }
 
-export default SearchBar;
+const mapDispatchToProps = dispatch => ({
+    queryResults: search => dispatch(queryResultsAsync(search))
+})
+
+export default connect(null, mapDispatchToProps)(SearchBar);

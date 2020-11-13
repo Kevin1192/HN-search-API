@@ -1,4 +1,6 @@
-
+.result {
+    margin: 10px 0;
+}
 .top-result {
     display: flex;
 }

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import SearchBar from '../components/SearchBar/SearchBar';
 import SearchResultsList from '../components/SearchResultsList/SearchResultsList';
 function SearchPage() {
 
     return (
-        <div>
+        <Fragment>
         <SearchBar />
         <SearchResultsList />
-        </div>
+        </Fragment>
     );
 }
 
