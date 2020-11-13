@@ -15,6 +15,7 @@
 .side-bar > ul {
     padding-inline-start: 30px;
 }
-.side-bar > li {
+.side-bar li {
     cursor: pointer;
+    margin: 5px 0;
 }
