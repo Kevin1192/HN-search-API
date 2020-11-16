@@ -11,6 +11,12 @@ Build an application that lets the user search the Hacker News Algolia API and d
 
 #### Installation
 
-1. Clone the repository. Git clone 
+If you would like to run the application locally, follow the instruction:
 
-2. 
+1. Clone the repository. `git clone https://github.com/Kevin1192/HN-search-API.git`
+
+2. cd into the directory.
+
+3. run `npm install`
+
+4. run `npm start`
