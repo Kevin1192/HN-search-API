@@ -7,3 +7,10 @@ Redux intro: https://egghead.io/courses/getting-started-with-redux
 
 Objective:
 Build an application that lets the user search the Hacker News Algolia API and displays a list of results.
+
+
+#### Installation
+
+1. Clone the repository. Git clone 
+
+2. 
