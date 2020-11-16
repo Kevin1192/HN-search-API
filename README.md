@@ -15,7 +15,7 @@ If you would like to run the application locally, follow the instruction:
 
 1. Clone the repository. `git clone https://github.com/Kevin1192/HN-search-API.git`
 
-2. cd into the directory.
+2. cd into the directory. `cd ./HN-search-API/`
 
 3. run `npm install`
 
