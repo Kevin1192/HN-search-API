@@ -8,8 +8,13 @@ Redux intro: https://egghead.io/courses/getting-started-with-redux
 Objective:
 Build an application that lets the user search the Hacker News Algolia API and displays a list of results.
 
+## Demo 
 
-#### Installation
+The Demo is deployed on Netlify:
+
+https://optimistic-aryabhata-2c3cbb.netlify.app/
+
+## Installation
 
 If you would like to run the application locally, follow the instruction:
 
