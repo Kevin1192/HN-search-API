@@ -8,7 +8,8 @@ const SearchBar = ({ queryResults, saveTerm, search, changeSearch }) => {
 
     useEffect(() => {
         queryResults(search, 0);
-    } , [search, queryResults]);
+    // eslint-disable-next-line 
+    } , [search]);
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
