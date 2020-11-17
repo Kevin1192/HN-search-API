@@ -30,6 +30,7 @@ const StepBar = ({ nbPages, currentPage, search, queryResultsAsync }) => {
         <div className='pagination'>
             <StepButton idx={'<<'} onClick={() => queryResultsAsync(search, 0)} />
             {stepButtons}
+            <StepButton idx={'>>'} onClick={() => queryResultsAsync(search, nbPages - 1)} />
         </div>
     )
 }
