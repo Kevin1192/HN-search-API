@@ -1,9 +1,11 @@
-import { SAVE_RESULTS, QUERY_RESULTS, RETRIVE_TERM, CHANGE_SEARCH } from '../actionTypes';
+import { SAVE_RESULTS, QUERY_RESULTS,CHANGE_SEARCH } from '../actionTypes';
 
 const initial_state = {
     results: [],
     terms: [],
-    search: ''
+    search: '',
+    nbPages: 0,
+    currentPage: 0
 }
 
 const searchReducer = (state = initial_state, action) => {
@@ -11,7 +13,9 @@ const searchReducer = (state = initial_state, action) => {
         case QUERY_RESULTS:
             return {
                 ...state,
-                results: action.payload
+                results: action.payload.results,
+                nbPages: action.payload.nbPages,
+                currentPage: action.payload.currentPage
             }
         case CHANGE_SEARCH:
             return {
@@ -23,11 +27,8 @@ const searchReducer = (state = initial_state, action) => {
                 ...state,
                 terms: [...state.terms, action.payload]
             }
-        case RETRIVE_TERM:
-
         default:
             return state;
     }
 }
-console.log(searchReducer, 'reducer');
 export default searchReducer;

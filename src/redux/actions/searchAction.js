@@ -1,9 +1,9 @@
 import { SAVE_RESULTS, QUERY_RESULTS, RETRIVE_TERM, CHANGE_SEARCH } from '../actionTypes';
 import { queryResultsFromApi } from '../../utils/queryResults';
 
-export const queryResults = (results) => ({
+export const queryResults = (resultsWithNbPages) => ({
     type: QUERY_RESULTS,
-    payload: results
+    payload: resultsWithNbPages
 })
 
 export const saveTerm = term => ({
@@ -22,11 +22,11 @@ export const changeSearch = search => ({
 })
 
 // thunk action creator
-export const queryResultsAsync = search => {
+export const queryResultsAsync = (search, page) => {
     return async dispatch => {
         try {
-            const results = await queryResultsFromApi(search);
-            return dispatch(queryResults(results));
+            const resultsWithNbPages = await queryResultsFromApi(search, page);
+            return dispatch(queryResults(resultsWithNbPages));
         } catch (err) {
             console.log(err);
         }

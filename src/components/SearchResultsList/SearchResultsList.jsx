@@ -7,7 +7,7 @@ const SearchResultsList = ({ results }) => {
    
     return (
         <Fragment>
-            {results.map((result, idx) => <SearchResult key={idx} result={result} />)}
+            {!results || results.map((result, idx) => <SearchResult key={idx} result={result} />)}
         </Fragment>
     )
 }

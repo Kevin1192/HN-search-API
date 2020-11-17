@@ -7,7 +7,6 @@ export const timeConverter = (current, previous) => {
     const msPerMonth = msPerDay * 30;
     const msPerYear = msPerDay * 365;
 
-    console.log('Year', msPerYear);
     const elapsed = current - previous;
 
     if (elapsed < msPerMinute) {

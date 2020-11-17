@@ -9,7 +9,6 @@ const SearchResult = ({ result }) => {
 
     const currentTime = new Date().getTime(),
     prevTime = new Date(created_at).getTime();
-    console.log('tyep', typeof(created_at))
     const timeAgo = timeConverter(currentTime, prevTime);
 
     return (
