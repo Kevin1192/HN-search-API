@@ -7,7 +7,7 @@ import { changeSearch, queryResultsAsync, saveTerm } from '../../redux/actions/s
 const SearchBar = ({ queryResults, saveTerm, search, changeSearch }) => {
 
     useEffect(() => {
-        queryResults(search);
+        queryResults(search, 0);
     } , [search]);
 
     const handleSubmit = (evt) => {
