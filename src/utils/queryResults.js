@@ -6,7 +6,7 @@ export const queryResultsFromApi = async (search, page = 0) => {
     const apiUrl = 'http://hn.algolia.com/api/v1/';
     try {
         const searchUrl = `${apiUrl}search?query=${search}&tags=story&page=${page}`; 
-        const res = await fetch(searchUrl);
+        const res = await fetch(searchUrl, { mode: 'cors'});
         const newRes = await res.json();
          const results = newRes.hits.map(result => ({
              title: result.title,
