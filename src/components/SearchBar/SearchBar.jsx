@@ -8,7 +8,7 @@ const SearchBar = ({ queryResults, saveTerm, search, changeSearch }) => {
 
     useEffect(() => {
         queryResults(search, 0);
-    } , [search]);
+    } , [search, queryResults]);
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
