@@ -1,4 +1,4 @@
-A React project consuming the HN search API, with Redux.
+A React project consuming the Hacker News search API, with Redux.
 
 
 HN search API: https://hn.algolia.com/api
